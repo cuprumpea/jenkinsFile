@@ -6,8 +6,20 @@ pipeline {
             steps {
                 echo 'Building..'
             }
-           
-        }
+            parallel {
+                         stage('parallel 检出1') {
+                            
+                                steps {
+                                     echo "parallel 检出1"
+                                      }
+                             }
+                            stage('parallel 检出2') {
+                            
+                                steps {
+                                    echo "parallel 检出1"
+                                     }               
+                        }
+                    }
         stage('测试') {
             steps {
                 echo 'Testing..'
