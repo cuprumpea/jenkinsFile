@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('构建') {
+        stage('check  out') {
             steps {
                 echo 'Building..'
             }
@@ -10,12 +10,12 @@ pipeline {
                 echo 'Building..'
             }
         }
-        stage('测试') {
+        stage('Test') {
             steps {
                 echo 'Testing..'
             }
         }
-        stage('部署') {
+        stage('delayout') {
             steps {
                 echo 'Deploying....'
             }
